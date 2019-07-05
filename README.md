@@ -1,2 +1,2 @@
-# jccwg
+# mybatis-generator-fix
 55555

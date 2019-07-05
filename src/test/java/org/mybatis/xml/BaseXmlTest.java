@@ -37,7 +37,6 @@ public class BaseXmlTest {
         try {
             DocumentBuilder builder = factory.newDocumentBuilder();
             builder.setEntityResolver(new ParserEntityResolver());
-
             Document document = null;
             try {
                 File f = new File("D:\\workspace\\USP\\baseline\\USP-DAO\\MybatisGenerator\\etradeConfig2.xml");

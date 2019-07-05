@@ -26,6 +26,7 @@ import org.mybatis.generator.internal.NullProgressCallback;
  * @author Jeff Butler
  * 
  */
+
 public class AntProgressCallback extends NullProgressCallback {
 
     private Task task;

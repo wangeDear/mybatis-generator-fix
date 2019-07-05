@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!---->
+    <classPathEntry location="D:/MAVEN/repository/efunds/classes12/1.0/classes12-1.0.jar"/>
+
+    <context id="OracleTables" targetRuntime="MyBatis3">
+	<!-- 指定生成的java文件的编码,没有直接生成到项目时中文可能会乱码 -->
+		<property name="javaFileEncoding" value="UTF-8" />
+        <commentGenerator>
+            <property name="suppressAllComments" value="false"/>
+			<property name="suppressDate" value="true"/>
+            <property name="addRemarkComments" value="true"/>
+        </commentGenerator>
+        <jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver"
+                        connectionURL="jdbc:oracle:thin:@192.1.51.114 :1521:saledev"
+                        userId="etrade"
+                        password="etrade">
+						<!-- 针对oracle数据库 -->
+            <property name="remarksReporting" value="true"/>
+        </jdbcConnection>
+
+        <!--<javaTypeResolver >-->
+        <!--<property name="forceBigDecimals" value="false" />-->
+        <!--</javaTypeResolver>-->
+
+        <javaModelGenerator targetPackage="com.efunds.market.usp.dao.etrade.model" targetProject="....\..\dao">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="com.efunds.market.usp.dao.etrade.xml" targetProject="....\..\dao">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.efunds.market.usp.dao.etrade.iface"
+                             targetProject="....\..\dao">
+            <property name="enableSubPackages" value="true"/>
+
+        </javaClientGenerator>
+
+        <!--SELECT * FROM T_PRE_MSG;-->
+
+        <!--SELECT * FROM T_PRE_MSG_CLICK;-->
+
+        <!--SELECT * FROM T_PRE_MSG_RECEIVER;;-->
+        <!--<table tableName="advert" domainObjectName="AdvertModel" >-->
+        <!--<property name="useActualColumnNames" value="false"/>-->
+        <!--</table>-->
+
+        <!--<table tableName="T_PRE_MSG_CLICK" domainObjectName="MsgClickModel" >-->
+        <!--<property name="useActualColumnNames" value="false"/>-->
+        <!--</table>-->
+        <!--<table tableName="T_PRE_MSG_RECEIVER" domainObjectName="MsgReceiverModel" >-->
+        <!--<property name="useActualColumnNames" value="false"/>-->
+        <!--</table>-->
+		
+		
+        <!-- <table tableName="REGISTER_CUSTOMER" domainObjectName="RegisterCustomerModel" > -->
+          <!-- <property name="useActualColumnNames" value="false"/> -->
+        <!-- </table> -->
+
+        <!-- <table tableName="T_CUSTINFO_EX" domainObjectName="TCustinfoExModel" > -->
+          <!-- <property name="useActualColumnNames" value="false"/> -->
+        <!-- </table>   -->
+
+        <!-- <table tableName="T_REG_CUSTOMER" domainObjectName="RegCustomer"> -->
+            <!-- <property name="useActualColumnNames" value="false"/> -->
+        <!-- </table> -->
+		
+		<!-- <table tableName="T_REG_BANKCARD" domainObjectName="RegBankCard"> -->
+            <!-- <property name="useActualColumnNames" value="false"/> -->
+        <!-- </table> -->
+		
+		<table tableName="T_REG_CERT_PHOTO" domainObjectName="RegCertPhoto">
+            <property name="useActualColumnNames" value="false"/>
+        </table>
+		
+		<!-- <table tableName="T_REG_CUSTOMER_CRS" domainObjectName="RegCustomerCrsInfo"> -->
+            <!-- <property name="useActualColumnNames" value="false"/> -->
+        <!-- </table> -->
+		
+		<!-- <table tableName="T_REG_CUSTOMER_EX_INFO" domainObjectName="RegCustomerExInfo"> -->
+            <!-- <property name="useActualColumnNames" value="false"/> -->
+        <!-- </table> -->
+		
+		<!-- <table tableName="T_OTHER_CRS_TAXPLACE" domainObjectName="OtherCrsTaxplace"> -->
+            <!-- <property name="useActualColumnNames" value="false"/> -->
+        <!-- </table> -->
+		
+		<!-- <table tableName="T_REG_PASSWORD_LOGIN" domainObjectName="RegPasswordLoginMode"> -->
+            <!-- <property name="useActualColumnNames" value="false"/> -->
+        <!-- </table> -->
+		
+		<!-- <table tableName="T_REG_LOGIN_ACCOUNT" domainObjectName="RegLoginAccount"> -->
+            <!-- <property name="useActualColumnNames" value="false"/> -->
+        <!-- </table> -->
+		
+		<!-- <table tableName="T_REG_LOGIN_EVENT" domainObjectName="RegLoginEvent"> -->
+            <!-- <property name="useActualColumnNames" value="false"/> -->
+        <!-- </table> -->
+		
+
+
+    </context>
+</generatorConfiguration>
